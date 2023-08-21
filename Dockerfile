@@ -13,4 +13,5 @@ RUN set -xe && \
     useradd -m -g ${ANSIBLE_USER} ${ANSIBLE_USER} && \
     usermod -aG ${SUDO_GROUP} ${ANSIBLE_USER} && \
     usermod -aG ${DEPLOY_GROUP} ${ANSIBLE_USER} && \
-    sed -i "/^%${SUDO_GROUP}/s/ALL\$/NOPASSWD:ALL/g" /etc/sudoers
+    sed -i "/^%${SUDO_GROUP}/s/ALL\$/NOPASSWD:ALL/g" /etc/sudoers && \
+    chown -R ${ANSIBLE_USER}:${ANSIBLE_USER} /home/${ANSIBLE_USER}
