@@ -1,4 +1,4 @@
-FROM geerlingguy/docker-amazonlinux2-ansible:latest
+FROM docker.io/geerlingguy/docker-amazonlinux2-ansible:latest
 LABEL maintainer="DIGIT-ECGALAXY@ec.europa.eu"
 
 ENV ANSIBLE_USER=ansible SUDO_GROUP=wheel DEPLOY_GROUP=deployer
